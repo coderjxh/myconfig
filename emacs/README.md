@@ -1,17 +1,19 @@
-# emacs插件和配置说明
+emacs插件和配置说明
+==============================================================
 
-# ubuntu
-
+ubuntu
+--------------------------------------------------------------
 	1. 将plugins拷贝到~/.emacs.d/目录下
   	2. $ cp .emacs.ubuntu ~/.emacs
 
-# windows
-
+windows
+--------------------------------------------------------------
 	1. 将plugins拷贝到EMACS_INSTALL_DIR/.emacs.d/目录下
   	2. $ cp .emacs.windows EMACS_INSTALL_DIR/.emacs
 
---------------------------------------------------------------
-# color-theme
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+### color-theme
 
 	http://download.savannah.gnu.org/releases/color-theme/
 
@@ -20,7 +22,7 @@
 		(color-theme-initialize)
 		(eval-after-load "color-theme" '(color-theme-blue-mood))
 
-# windows-numbering
+### windows-numbering
 
 	https://github.com/nschum/window-numbering.el
 	编辑.emacs，加入以下内容：
@@ -28,7 +30,7 @@
 	   	(require 'window-numbering)
 	   	(window-numbering-mode 1)
 
-# yasnippet
+### yasnippet
 
 	快速补齐 https://github.com/capitaomorte/yasnippet
   	   1. $ cd .emacs.d && mkdir plugins
@@ -45,13 +47,13 @@
 	       $ git clone git@github.com:AndreaCrotti/yasnippet-sippets.git snippets
 	     5. M-x yas-reload-all 激活
 
-# 以sudo权限重新打开文件
+### 以sudo权限重新打开文件
 
 	编辑.emacs，加入以下内容
 	   (require 'sudo-reopen)
 	   (global-set-key (kbd "C-c s u") 'sudo-reopen)
 
-# 设置F9调用speedbar命令
+### 设置F9调用speedbar命令
 
 	https://github.com/emacsmirror/emacswiki.org/blob/master/sr-speedbar.el
 	编辑.emacs，加入以下内容
@@ -64,7 +66,7 @@
  	                        (interactive)
  	                        (sr-speedbar-toggle)))
 
-# CMake-mode
+### CMake-mode
 
 	https://github.com/Kitware/CMake/blob/master/Auxiliary/cmake-mode.el
 	.emacs中加入以下内容
