@@ -1,18 +1,17 @@
-emacs插件和配置说明
+#emacs插件和配置说明
 ==============================================================
 
-ubuntu
+##ubuntu
 --------------------------------------------------------------
 	1. 将plugins拷贝到~/.emacs.d/目录下
   	2. $ cp .emacs.ubuntu ~/.emacs
 
-windows
+##windows
 --------------------------------------------------------------
 	1. 将plugins拷贝到EMACS_INSTALL_DIR/.emacs.d/目录下
   	2. $ cp .emacs.windows EMACS_INSTALL_DIR/.emacs
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+##插件说明
 ### color-theme
 
 	http://download.savannah.gnu.org/releases/color-theme/
