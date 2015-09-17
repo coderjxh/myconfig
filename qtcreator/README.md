@@ -1,3 +1,5 @@
+from https://github.com/whinc/qtcreator-style
+
 ##概览
 先看一下最终的效果图，与VS2013深色主题相近的代码配色和界面配色，是不是有点心动了呢？
 
