@@ -1,0 +1,2 @@
+#cmakedefine HAVE_UI
+#cmakedefine HAVE_QRC
