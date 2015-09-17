@@ -25,7 +25,7 @@ if !has('python')
 endif
 
 if !exists('g:cmake_project_show_bar')
-    let g:cmake_project_show_bar = 0 
+    let g:cmake_project_show_bar = 0
 else
     call s:cmake_show_bar()
 endif
@@ -100,7 +100,7 @@ for file in files:
     file_name = paths[-1]
     paths.pop()
 
-    current_tree_ref = s_cmake_project_file_tree 
+    current_tree_ref = s_cmake_project_file_tree
     for path in paths:
         directories, _, _ = current_tree_ref
         if not directories.has_key(path):
@@ -138,7 +138,7 @@ def process_folder(i_directory, i_recursion_level):
         text += file_name
         s_cmake_project_file_dict[len(vim.current.buffer)] = full_path
         vim.current.buffer.append(text)
-    
+
 
     for folder_name in directories.keys():
         text = '   ' * i_recursion_level
@@ -149,14 +149,14 @@ def process_folder(i_directory, i_recursion_level):
         vim.current.buffer.append(text)
         if prop.visible == True:
             process_folder(folder_content, i_recursion_level + 1)
-        
+
 s_cmake_project_node_dict =  {}
 process_folder(s_cmake_project_file_tree, 0)
 EOF
 
     " Remove first line
     normal gg
-    normal dd 
+    normal dd
 endfunction
 
 
@@ -174,7 +174,7 @@ function! s:cmake_show_bar() abort
     setlocal modifiable
 
     let s:cmake_project_bufname = bufname('%')
-    normal gg    
+    normal gg
     normal dG
 
     call s:cmake_print_file_tree()
@@ -182,7 +182,7 @@ function! s:cmake_show_bar() abort
 endfunction
 
 
-function! g:cmake_on_space_clicked() abort
+function! s:cmake_on_space_clicked() abort
     if !exists('s:cmake_project_bufname') || bufname('%') != s:cmake_project_bufname
         return
     endif
@@ -211,7 +211,7 @@ def open():
     vim.command('wincmd l')
 
     file_path = get_file_path()
-    vim.command('badd ' + file_path) 
+    vim.command('badd ' + file_path)
     vim.command('buffer ' + file_path)
     vim.command('setlocal switchbuf=useopen')
     vim.command('sbuffer @CMakeProject')
