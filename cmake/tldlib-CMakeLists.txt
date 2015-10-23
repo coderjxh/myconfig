@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.8)
+set(tldlib_SRCS src/FerNNClassifier.cpp
+  src/LKTracker.cpp
+  src/TLD.cpp
+  src/tld_utils.cpp)
+
+set(tldlib_HDRS
+  include/FerNNClassifier.h
+  include/LKTracker.h
+  include/TLD.h
+  include/tld_utils.h)
+set(OpenCV_DIR /home/install/opencv2.4.12.1)
+find_package(OpenCV REQUIRED)
+
+INCLUDE_DIRECTORIES(include)
+#ADD_LIBRARY(tldlib ${tldlib_SRCS} SHARED ${tldlib_HDRS})
+add_library(tldlib SHARED ${tldlib_SRCS})
